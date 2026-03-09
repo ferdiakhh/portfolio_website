@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karya | Ferdi Akhdan</title>
+    <meta name="description"
+        content="Koleksi proyek mobile & web development — aplikasi Flutter, backend Golang, dan website Next.js.">
+    <link rel="stylesheet" href="/src/styles/components.css">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="loader" id="loader">
+        <h1 class="loader__text" data-i18n="common.loading">MEMUAT...</h1>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="nav__logo">FERDIDEV.</a>
+
+        <div class="nav__lang-toggle">
+            <button class="lang-toggle-btn active" data-lang="id">ID</button>
+            <button class="lang-toggle-btn" data-lang="en">EN</button>
+        </div>
+
+        <div class="nav__links">
+            <a href="/about.html" data-i18n="nav.about">Tentang</a>
+            <a href="/projects.html" data-i18n="nav.projects">Karya</a>
+            <a href="#contact" data-i18n="nav.contact">Kontak</a>
+            <div class="nav__download">
+                <button class="nav__download-btn" aria-label="Download" id="nav-download-toggle">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </button>
+                <div class="nav__download-menu" id="nav-download-menu">
+                    <a href="/file/Muhammad Ferdi Akhdan-CV.pdf" download>
+                        <span class="nav__download-icon">📄</span> Resume / CV
+                    </a>
+                    <a href="#" class="disabled">
+                        <span class="nav__download-icon">💼</span> Portfolio <span
+                            class="nav__download-soon">Soon</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="nav__hamburger" aria-label="Menu">
+            <span class="nav__hamburger-line"></span>
+            <span class="nav__hamburger-line"></span>
+            <span class="nav__hamburger-line"></span>
+        </button>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="hero__bg-blob hero__bg-blob--red absolute" data-speed="0.8"></div>
+        <div class="hero__bg-blob hero__bg-blob--yellow absolute" data-speed="1.2"></div>
+        <h1 class="page-hero__title text-outline" data-i18n="projects.hero.title">Karya Saya</h1>
+        <p class="page-hero__subtitle" data-i18n="projects.hero.subtitle">Mobile • Web • Fullstack</p>
+    </section>
+
+    <!-- FILTER TABS -->
+    <div class="filter-tabs" id="filter-tabs">
+        <button class="filter-tab filter-tab--active" data-filter="all" data-i18n="filter.all">Semua</button>
+        <button class="filter-tab" data-filter="mobile" data-i18n="filter.mobile">Mobile</button>
+        <button class="filter-tab" data-filter="web" data-i18n="filter.web">Web</button>
+    </div>
+
+    <!-- PROJECT GRID -->
+    <section class="project-grid" id="project-grid">
+        <!-- Cards will be rendered by JS from projects-data.js -->
+    </section>
+
+    <!-- PARALLAX BREAK -->
+    <section class="parallax-break">
+        <div class="parallax-break__bg">
+            <div class="parallax-break__noise"></div>
+        </div>
+        <h2 class="parallax-break__title" data-i18n="common.moreComingSoon">
+            Lebih Banyak <br> <span class="text-outline-red">Segera Hadir.</span>
+        </h2>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="footer">
+        <div class="footer__inner">
+            <div>
+                <p class="footer__label" data-i18n="footer.label">Ada proyek? Mari ngobrol.</p>
+                <a href="mailto:zeedoysmurdock@gmail.com" class="footer__cta-link" data-i18n="footer.cta">SAPA SAYA
+                    ↗</a>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__social">
+                    <a href="https://linkedin.com/in/ferdiakh" target="_blank">LinkedIn</a>
+                    <a href="mailto:zeedoysmurdock@gmail.com">Email</a>
+                </div>
+                <div class="text-right">
+                    <p>© 2026 Ferdi Akhdan.</p>
+                    <p data-i18n="footer.builtWith">Dibangun dengan <span class="text-red">♥</span> & Kode.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bg-blob"></div>
+    </footer>
+
+    <script type="module" src="/src/js/projects.js"></script>
+</body>
+
+</html>

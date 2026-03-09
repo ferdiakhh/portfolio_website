@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferdi Akhdan | Mobile Developer & Engineer</title>
+    <meta name="description"
+        content="Muhammad Ferdi Akhdan — Mobile Developer & Backend Engineer. Membangun aplikasi mobile yang scalable dengan Flutter, Golang, dan arsitektur modern.">
+    <link rel="stylesheet" href="/src/styles/components.css">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="loader" id="loader">
+        <h1 class="loader__text" data-i18n="common.loading">MEMUAT...</h1>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="nav__logo">FERDIDEV.</a>
+
+        <div class="nav__lang-toggle">
+            <button class="lang-toggle-btn active" data-lang="id">ID</button>
+            <button class="lang-toggle-btn" data-lang="en">EN</button>
+        </div>
+
+        <div class="nav__links">
+            <a href="/about.html" data-i18n="nav.about">Tentang</a>
+            <a href="/projects.html" data-i18n="nav.projects">Karya</a>
+            <a href="#contact" data-i18n="nav.contact">Kontak</a>
+            <div class="nav__download">
+                <button class="nav__download-btn" aria-label="Download" id="nav-download-toggle">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </button>
+                <div class="nav__download-menu" id="nav-download-menu">
+                    <a href="/file/Muhammad Ferdi Akhdan-CV.pdf" download>
+                        <span class="nav__download-icon">📄</span> Resume / CV
+                    </a>
+                    <a href="#" class="disabled">
+                        <span class="nav__download-icon">💼</span> Portfolio <span
+                            class="nav__download-soon">Soon</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="nav__hamburger" aria-label="Menu">
+            <span class="nav__hamburger-line"></span>
+            <span class="nav__hamburger-line"></span>
+            <span class="nav__hamburger-line"></span>
+        </button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <!-- Parallax Background Blobs -->
+        <div class="hero__bg-blob hero__bg-blob--red absolute" data-speed="0.8"></div>
+        <div class="hero__bg-blob hero__bg-blob--yellow absolute" data-speed="1.2"></div>
+
+        <div class="hero__grid">
+            <!-- LEFT: Typography + CTAs -->
+            <div class="hero__left">
+                <div class="hero__accent-label">
+                    <span class="hero__accent-bar"></span>
+                    <span data-i18n="home.hero.name">FERDI AKHDAN</span>
+                </div>
+
+                <div class="hero__content">
+                    <h1 class="text-huge hero__title--outline" data-i18n="home.hero.title1">Mobile</h1>
+                    <h1 class="text-huge hero__title--yellow" data-i18n="home.hero.title2">Developer</h1>
+                    <h1 class="text-huge hero__title--white" data-i18n="home.hero.title3">&amp; Engineer</h1>
+
+                    <p class="hero__subtitle" data-i18n="home.hero.subtitle">Membangun Ekosistem Mobile Berkualitas
+                        Tinggi & Scalable</p>
+
+                    <div class="hero__actions">
+                        <a href="#work" class="hero__btn hero__btn--primary" data-i18n="home.hero.cta.work">Lihat
+                            Karya</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Creative Photo -->
+            <div class="hero__right" data-speed="0.95">
+                <div class="hero__photo-wrapper">
+                    <div class="hero__photo-glow"></div>
+                    <div class="hero__photo-frame">
+                        <img src="/images/profileferdi.jpg" alt="Ferdi Akhdan" class="hero__profile-img">
+                        <div class="hero__photo-overlay"></div>
+                    </div>
+                    <!-- Decorative Accents -->
+                    <div class="hero__deco hero__deco--dots"></div>
+                    <div class="hero__deco hero__deco--ring"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__scroll-hint" data-i18n="home.hero.scrollHint">
+            <span class="hero__scroll-line"></span> Scroll ke bawah
+        </div>
+    </section>
+
+    <!-- SCROLLYTELLING ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="about__text-wrapper" style="max-width: 72rem; margin: 0 auto;">
+            <p class="about__text" id="reveal-text" data-i18n="home.about.text">
+                Saya tidak hanya menulis kode — saya merancang <span class="text-red">ekosistem digital</span> yang
+                scalable. Dari arsitektur monorepo hingga integrasi API yang bulletproof, saya mengubah kebutuhan bisnis
+                menjadi
+                <span class="text-yellow">solusi teknis berperforma tinggi</span> yang siap produksi.
+            </p>
+
+            <div class="about-facts">
+                <div class="fact-card">
+                    <h3 class="fact-card__num text-red" data-i18n="home.about.fact1.num">1+</h3>
+                    <p class="fact-card__label" data-i18n="home.about.fact1.label">Tahun Pengalaman</p>
+                </div>
+                <div class="fact-card">
+                    <h3 class="fact-card__num text-yellow" data-i18n="home.about.fact2.num">3+</h3>
+                    <p class="fact-card__label" data-i18n="home.about.fact2.label">App di Play Store</p>
+                </div>
+                <div class="fact-card">
+                    <h3 class="fact-card__num text-white" data-i18n="home.about.fact3.num">100%</h3>
+                    <p class="fact-card__label" data-i18n="home.about.fact3.label">Pixel-Perfect UI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE TYPOGRAPHY -->
+    <section class="marquee">
+        <div class="marquee__inner">
+            <span class="marquee__text" data-i18n="home.marquee.text">&nbsp;FLUTTER • GOLANG • PIXEL PERFECT • CLEAN
+                ARCHITECTURE • FLUTTER • GOLANG •
+                PIXEL PERFECT • CLEAN ARCHITECTURE •</span>
+            <span class="marquee__text" data-i18n="home.marquee.text">&nbsp;FLUTTER • GOLANG • PIXEL PERFECT • CLEAN
+                ARCHITECTURE • FLUTTER • GOLANG •
+                PIXEL PERFECT • CLEAN ARCHITECTURE •</span>
+        </div>
+    </section>
+
+    <!-- TRUSTED BY MARQUEE -->
+    <section class="trusted-by-section">
+        <p class="trusted-by__label" data-i18n="home.trustedBy">Dipercaya oleh berbagai klien & perusahaan inovatif:</p>
+        <div class="logo-marquee">
+            <div class="logo-marquee__inner">
+                <!-- Logos Group 1 -->
+                <img src="/images/company_logo/hni.png" alt="HNI" class="client-logo">
+                <img src="/images/company_logo/vocasia.png" alt="Vocasia" class="client-logo">
+                <img src="/images/company_logo/airistel.png" alt="PT. Airistel" class="client-logo">
+                <img src="/images/company_logo/naruma.png" alt="Naruma" class="client-logo">
+                <img src="/images/company_logo/warranty.png" alt="Warranty Smart" class="client-logo">
+                <!-- Logos Group 2 (Clone for infinite effect) -->
+                <img src="/images/company_logo/hni.png" alt="HNI" class="client-logo">
+                <img src="/images/company_logo/vocasia.png" alt="Vocasia" class="client-logo">
+                <img src="/images/company_logo/airistel.png" alt="PT. Airistel" class="client-logo">
+                <img src="/images/company_logo/naruma.png" alt="Naruma" class="client-logo">
+                <img src="/images/company_logo/warranty.png" alt="Warranty Smart" class="client-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- PINNED HORIZONTAL SCROLL (PROJECTS) -->
+    <section id="work" class="hero bg-dark relative overflow-hidden" style="align-items: flex-start;">
+        <div class="work-bg-text" data-i18n="home.work.title">KARYA TERPILIH</div>
+
+        <div class="horizontal-scroll-container">
+            <!-- Card 1 -->
+            <a href="/project-detail.html?project=halmall-ecosystem" class="project-card">
+                <img src="/images/projects/halmall_bg.png" alt="Halmall Ecosystem" class="project-card__img" />
+                <div class="project-card__content">
+                    <p class="project-card__category">01 — MOBILE APP</p>
+                    <h2 class="project-card__title">Halmall Ecosystem</h2>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="/project-detail.html?project=hniid-mobile" class="project-card">
+                <img src="/images/projects/hniid_bg.png" alt="HNI.id Mobile" class="project-card__img"
+                    style="opacity: 0.2;" />
+                <div class="project-card__content">
+                    <p class="project-card__category">02 — MOBILE APP</p>
+                    <h2 class="project-card__title">HNI.id Mobile</h2>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="/project-detail.html?project=vocasia-elearning" class="project-card">
+                <img src="/images/projects/vocasia_bg.png" alt="Vocasia E-Learning" class="project-card__img"
+                    style="opacity: 0.2;" />
+                <div class="project-card__content">
+                    <p class="project-card__category">03 — MOBILE APP</p>
+                    <h2 class="project-card__title">Vocasia E-Learning</h2>
+                </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="/project-detail.html?project=idrusaljufri-web" class="project-card">
+                <img src="/images/projects/idrusaljufri.png" alt="idrusaljufri.com" class="project-card__img"
+                    style="opacity: 0.2;" />
+                <div class="project-card__content">
+                    <p class="project-card__category">04 — WEB DEVELOPMENT</p>
+                    <h2 class="project-card__title">idrusaljufri.com</h2>
+                </div>
+            </a>
+
+            <!-- CTA Card -->
+            <a href="/projects.html" class="project-card project-card--cta">
+                <h2 class="project-card--cta__title" data-i18n="home.work.seeMoreTitle">Lihat Lebih Banyak</h2>
+                <div class="project-card--cta__icon">→</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- PARALLAX IMAGE BREAK -->
+    <section class="parallax-break">
+        <div class="parallax-break__bg">
+            <div class="parallax-break__noise"></div>
+        </div>
+        <h2 class="parallax-break__title" data-i18n="common.buildFuture">
+            Bangun Produk <br> <span class="text-outline-red">Masa Depan.</span>
+        </h2>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="footer">
+        <div class="footer__inner">
+            <div>
+                <p class="footer__label" data-i18n="footer.label">Ada proyek? Mari ngobrol.</p>
+                <a href="mailto:zeedoysmurdock@gmail.com" class="footer__cta-link" id="email-link"
+                    data-i18n="footer.cta">
+                    SAPA SAYA ↗
+                </a>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__social">
+                    <a href="https://linkedin.com/in/ferdiakh" target="_blank">LinkedIn</a>
+                    <a href="mailto:zeedoysmurdock@gmail.com">Email</a>
+                </div>
+                <div class="text-right">
+                    <p>© 2026 Ferdi Akhdan.</p>
+                    <p data-i18n="footer.builtWith">Dibangun dengan <span class="text-red">♥</span> & Kode.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bg-blob"></div>
+    </footer>
+
+    <!-- Entry Point -->
+    <script type="module" src="/src/js/home.js"></script>
+</body>
+
+</html>

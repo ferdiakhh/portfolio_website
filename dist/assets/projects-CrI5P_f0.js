@@ -1,0 +1,7 @@
+import{g as i,S as n,i as p,a as b,b as g,c as m,d as y,e as h,r as v,f as T}from"./i18n-nespIPlR.js";import{p as l}from"./projects-data-C6PBQclP.js";i.registerPlugin(n);p();b();g();m();y();window.addEventListener("load",()=>{h()});const s=document.getElementById("project-grid");function o(e="all"){s.innerHTML="",(e==="all"?l:l.filter(t=>t.categoryTag===e)).forEach((t,_)=>{const a=document.createElement("a");a.href=`/project-detail.html?project=${t.slug}`,a.className="project-grid-card",a.setAttribute("data-category",t.categoryTag);const c=T(),u=t.category[c]||t.category.id,f=t.title[c]||t.title.id;a.innerHTML=`
+      <div class="project-grid-card__bg" style="background: ${t.gradient};"></div>
+      <div class="project-grid-card__content">
+        <p class="project-grid-card__category">${t.number} — ${u.toUpperCase()}</p>
+        <h2 class="project-grid-card__title">${f}</h2>
+      </div>
+    `,s.appendChild(a)}),i.fromTo(".project-grid-card",{y:60,opacity:0},{y:0,opacity:1,duration:.8,stagger:.15,ease:"power3.out"}),g()}o();const d=document.querySelectorAll(".filter-tab");d.forEach(e=>{e.addEventListener("click",()=>{d.forEach(r=>r.classList.remove("filter-tab--active")),e.classList.add("filter-tab--active"),o(e.getAttribute("data-filter"))})});i.to(".parallax-break__bg",{y:"30%",ease:"none",scrollTrigger:{trigger:".parallax-break__bg",start:"top bottom",end:"bottom top",scrub:!0}});v(()=>{const e=document.querySelector(".filter-tab--active"),r=e?e.getAttribute("data-filter"):"all";o(r),n.refresh()});
