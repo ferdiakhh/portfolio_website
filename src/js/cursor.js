@@ -2,8 +2,14 @@ import gsap from 'gsap';
 
 /**
  * Initialize custom cursor (yellow dot + red outline)
+ * Only active on desktop (screen width >= 1024px)
  */
 export function initCursor() {
+    // Early return on mobile/tablet screens
+    if (window.innerWidth < 1024) {
+        return;
+    }
+
     const cursorDot = document.getElementById('cursor-dot');
     const cursorOutline = document.getElementById('cursor-outline');
 

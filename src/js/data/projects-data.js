@@ -163,20 +163,21 @@ export const projectsData = [
         ],
         playStoreLink: 'https://play.google.com/store/apps/details?id=id.vocasia.vocasia_app&pcampaignid=web_share'
     },
-    {
-        slug: 'idrusaljufri-web',
-        title: { id: 'idrusaljufri.com', en: 'idrusaljufri.com' },
-        category: { id: 'Web Development', en: 'Web Development' },
-        categoryTag: 'web',
-        number: '04',
-        description: {
-            id: 'Website profesional yang dibangun dari nol menggunakan Next.js, mengelola seluruh siklus SDLC dari wireframe hingga deployment. Mencapai skor Lighthouse 90%+ untuk performa, aksesibilitas, dan SEO. Didukung backend Golang microservices untuk sinkronisasi data yang seamless.',
-            en: 'Professional website built from scratch using Next.js, managing the entire SDLC cycle from wireframes to deployment. Achieved 90%+ Lighthouse scores for performance, accessibility, and SEO. Backed by Golang microservices for seamless data synchronization.'
-        },
-        techStack: ['Next.js', 'Golang', 'Microservices', 'REST API'],
-        gradient: 'linear-gradient(135deg, #FBE122 0%, #1a1a1a 100%)',
-        images: ['/images/projects/idrusaljufri.png'],
-    },
+    // TEMPORARILY HIDDEN - idrusaljufri.com project
+    // {
+    //     slug: 'idrusaljufri-web',
+    //     title: { id: 'idrusaljufri.com', en: 'idrusaljufri.com' },
+    //     category: { id: 'Web Development', en: 'Web Development' },
+    //     categoryTag: 'web',
+    //     number: '04',
+    //     description: {
+    //         id: 'Website profesional yang dibangun dari nol menggunakan Next.js, mengelola seluruh siklus SDLC dari wireframe hingga deployment. Mencapai skor Lighthouse 90%+ untuk performa, aksesibilitas, dan SEO. Didukung backend Golang microservices untuk sinkronisasi data yang seamless.',
+    //         en: 'Professional website built from scratch using Next.js, managing the entire SDLC cycle from wireframes to deployment. Achieved 90%+ Lighthouse scores for performance, accessibility, and SEO. Backed by Golang microservices for seamless data synchronization.'
+    //     },
+    //     techStack: ['Next.js', 'Golang', 'Microservices', 'REST API'],
+    //     gradient: 'linear-gradient(135deg, #FBE122 0%, #1a1a1a 100%)',
+    //     images: ['/images/projects/idrusaljufri.png'],
+    // },
     {
         slug: 'warranty-smart',
         title: { id: 'Warranty Smart Indonesia', en: 'Warranty Smart Indonesia' },

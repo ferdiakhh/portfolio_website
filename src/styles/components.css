@@ -45,6 +45,18 @@
     }
 }
 
+/* Hide custom cursor on mobile and tablet (screen < 1024px) */
+@media (max-width: 1023px) {
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+    }
+
+    body {
+        cursor: auto !important;
+    }
+}
+
 /* ========================================
    NAVIGATION
    ======================================== */
@@ -669,11 +681,33 @@
 .hero__actions {
     margin-top: 2.5rem;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Button left, scroll hint right */
+    align-items: center; /* Vertical alignment */
+    width: 100%; /* Full width for proper spacing */
     gap: 1rem;
     animation: fadeUpIn 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     animation-delay: 0.5s;
     opacity: 0;
+}
+
+/* Responsive: Handle very small screens */
+@media (max-width: 400px) {
+    .hero__actions {
+        justify-content: center;
+        position: relative;
+    }
+
+    .hero__scroll-hint {
+        position: absolute;
+        right: 0;
+    }
+}
+
+/* Desktop: No special overrides needed */
+@media (min-width: 768px) {
+    .hero__actions {
+        /* Keep space-between layout */
+    }
 }
 
 .hero__btn {
@@ -718,32 +752,45 @@
 }
 
 .hero__scroll-hint {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static; /* Remove absolute positioning - now flows naturally */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Space between line and text */
     font-family: var(--font-body);
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
     color: rgba(255, 255, 255, 0.5);
     z-index: 5;
+    flex-shrink: 0; /* Prevent text wrapping on small screens */
 }
 
 @media (min-width: 768px) {
     .hero__scroll-hint {
-        bottom: 2.5rem;
         font-size: 0.875rem;
+        gap: 1rem; /* Larger gap on desktop */
+    }
+}
+
+/* Very small screens optimization */
+@media (max-width: 360px) {
+    .hero__scroll-hint {
+        font-size: 0.65rem;
+        gap: 0.5rem;
     }
 }
 
 .hero__scroll-line {
-    width: 2.5rem;
+    width: 2rem; /* Smaller on mobile */
     height: 1px;
     background-color: var(--color-red);
+    flex-shrink: 0; /* Prevent line from shrinking */
+}
+
+@media (min-width: 768px) {
+    .hero__scroll-line {
+        width: 2.5rem; /* Original size on desktop */
+    }
 }
 
 /* ========================================
@@ -761,6 +808,7 @@
     position: relative;
     overflow: hidden;
     padding: 0 1.5rem;
+    gap: 0.75rem;
 }
 
 @media (min-width: 768px) {
@@ -768,33 +816,81 @@
         height: 60vh;
         min-height: 400px;
         padding: 0;
+        gap: 1rem;
     }
 }
 
+/* Accent Label with Bar */
+.page-hero__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeUpIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+.page-hero__accent-bar {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2px;
+    background: var(--color-red);
+}
+
+@media (min-width: 768px) {
+    .page-hero__accent-bar {
+        width: 3rem;
+    }
+}
+
+.page-hero__accent-text {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 768px) {
+    .page-hero__accent-text {
+        font-size: 0.875rem;
+    }
+}
+
+/* Title - Bold & Dramatic Typography */
 .page-hero__title {
     font-family: var(--font-heading);
     font-size: clamp(3rem, 12vw, 15rem);
-    line-height: 0.85;
+    font-weight: 800; /* Bold but not too heavy */
+    line-height: 0.9; /* Less compressed, more readable */
     text-transform: uppercase;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em; /* More breathable spacing */
     text-align: center;
     z-index: 10;
+    margin: 0;
+    opacity: 0;
+    animation: fadeUpIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.4s;
 }
 
 .page-hero__subtitle {
     font-family: var(--font-body);
     font-size: 0.75rem;
+    font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-yellow);
-    margin-top: 1rem;
     z-index: 10;
+    opacity: 0;
+    animation: fadeUpIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.6s;
 }
 
 @media (min-width: 768px) {
     .page-hero__subtitle {
         font-size: 1rem;
-        margin-top: 1.5rem;
     }
 }
 
@@ -1940,9 +2036,10 @@ a.about-hero__meta-value:hover {
 .detail-hero__title {
     font-family: var(--font-heading);
     font-size: clamp(3rem, 10vw, 10rem);
+    font-weight: 800; /* Bold but readable */
     line-height: 0.9;
     text-transform: uppercase;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em; /* More breathable spacing */
     position: relative;
     z-index: 10;
 }

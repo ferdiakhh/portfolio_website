@@ -66,9 +66,9 @@ export const translations = {
         id: 'Saya tidak hanya menulis kode — saya merancang <span class="text-red">ekosistem digital</span> yang scalable. Dari arsitektur monorepo hingga integrasi API yang bulletproof, saya mengubah kebutuhan bisnis menjadi <span class="text-yellow">solusi teknis berperforma tinggi</span> yang siap produksi.',
         en: 'I don\'t just write code — I engineer scalable <span class="text-red">digital ecosystems</span>. From monorepo architectures to bulletproof API integrations, I transform business needs into <span class="text-yellow">high-performance technical solutions</span> ready for production.'
     },
-    'home.about.fact1.num': { id: '3+', en: '3+' },
+    'home.about.fact1.num': { id: '1+', en: '1+' },
     'home.about.fact1.label': { id: 'Tahun Pengalaman', en: 'Years Experience' },
-    'home.about.fact2.num': { id: '5+', en: '5+' },
+    'home.about.fact2.num': { id: '3+', en: '3+' },
     'home.about.fact2.label': { id: 'App di Play Store', en: 'Apps on Play Store' },
     'home.about.fact3.num': { id: '100%', en: '100%' },
     'home.about.fact3.label': { id: 'Pixel-Perfect UI', en: 'Pixel-Perfect UI' },
@@ -160,6 +160,7 @@ export const translations = {
     // ------------------------------------------------------------------------
     // Projects Page & Project Detail UI
     // ------------------------------------------------------------------------
+    'projects.hero.label': { id: 'PORTFOLIO', en: 'PORTFOLIO' },
     'projects.hero.title': { id: 'Karya Saya', en: 'My Work' },
     'projects.hero.subtitle': { id: 'Mobile • Web • Fullstack', en: 'Mobile • Web • Fullstack' },
 
